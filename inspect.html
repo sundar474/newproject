@@ -1,0 +1,21 @@
+adminPort.createAll(
+          "source",
+          webSourceXML,
+          "password",
+          credentials,
+          null,
+          null,
+          "en" 
+        );
+ 
+        // 2. Export all sources to show the full definition
+        ObjectOutput oo = adminPort.exportAll(
+          "source",
+          null,
+          "password",
+          credentials,
+          null,
+          "en"
+        );
+        System.out.println("Web Source XML = \n" + oo.getObjectXML() );
+	
